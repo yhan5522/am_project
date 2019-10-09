@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
    
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -9,6 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>미추홀도서관</title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
 	<header id="main_header">
@@ -58,14 +59,14 @@
                 <form name="form1" method="post" action="BookController">
                 	<input type="hidden" name="action" value="list">
 					<input type="hidden" name="bookNumber" value=0>
-					<input type="text" name="searchBookName" value=${bookDTO.searchBookName} placeholder="도서 정보를 입력하시오.">
-                </form>
+					<input type="text" name="searchBookName" value=${bookDTO.searchBookName}>
+                </form>  
 				<a href="#"><img src="Img/search_1.png"></a>
 			</article>
         	<article class="main_article">
             	<ul>
 					<li class="article_title">추천 도서</li>
-					<img src="Img/book1.jpg">
+					<img src="/Img/book1.jpg">
 					<li class="book_title">도로시 죽이기</li>
 					<li class="book_sub">고바야시 야스미<br>검은숲</li>				
 					
