@@ -13,12 +13,23 @@ public class BookDAO {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 
-	// MySQL ¿¬°áÁ¤º¸ 
+	// MySQL ì—°ê²°ì •ë³´ 
 	String jdbc_driver = "com.mysql.jdbc.Driver";
 	
 	String jdbc_url = "jdbc:mysql://127.0.0.1/jspdb?useSSL=true&verifyServerCertificate=false&serverTimezone=UTC";
 
-	// DB ¿¬°á
+	/**
+	 * 	@fn			void connect()
+	 *	@brief		DB ì—°ê²°
+	 *	@details
+	 *
+	 *	@author		í•œì˜ˆë‚˜
+	 *	@date		2019-09-19
+	 *
+	 *	@param		
+	 *  
+	 *	@remark	
+	 */
 	void connect() {
 		try {
 			Class.forName(jdbc_driver);
@@ -29,7 +40,18 @@ public class BookDAO {
 		}
 	}
 	
-	// DB ¿¬°áÇØÁ¦
+	/**
+	 * 	@fn			void disconnect()
+	 *	@brief		DB ì—°ê²° í•´ì œ
+	 *	@details
+	 *
+	 *	@author		í•œì˜ˆë‚˜
+	 *	@date		2019-09-19
+	 *
+	 *	@param		
+	 *  
+	 *	@remark	
+	 */
 	void disconnect() {
 		if(pstmt != null) {
 			try {
@@ -47,33 +69,37 @@ public class BookDAO {
 		}
 	}
 	
-	// ¸ñ·Ï Á¶È¸
+	/**
+	 * 	@fn			public List<BookDTO> getDBList(String searchBookName)
+	 *	@brief		ê²€ìƒ‰ ì‹œ ê²°ê³¼ ëª©ë¡ ì¡°íšŒ
+	 *	@details
+	 *
+	 *	@author		í•œì˜ˆë‚˜
+	 *	@date		2019-09-26
+	 *
+	 *	@param		String searchBookName ë°ì´í„°ë² ì´ìŠ¤ì— ì €ì¥ëœ ê°’
+	 *  
+	 *	@remark		ë°ì´í„°ë² ì´ìŠ¤ì˜ ê°’ì„ ì €ì¥í•˜ê¸° ìœ„í•´ booklist ì„ ì–¸
+	 *				ë°ì´í„°ë² ì´ìŠ¤ì—ì„œ selectí•˜ê¸° ìœ„í•´ sql ì„ ì–¸
+	 *				sqlë¬¸ì„ ì‹¤í–‰í•˜ê¸° ìœ„í•´ rs ì„ ì–¸
+	 *				select ê²°ê³¼ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•´ bookDTO ì„ ì–¸			[2019-09-26; í•œì˜ˆë‚˜]
+	 */
 	public List<BookDTO> getDBList(String searchBookName) {
-		
 		connect();
-		
 		List<BookDTO> bookList = new ArrayList<BookDTO>();
-		
 		String sql = "select bookNumber, bookName, author, publishingHouse, category, symbol, status from book where bookName like ?";
 		
-		try {
-			
+		try {	
 			pstmt = conn.prepareStatement(sql);
-			
-
-			// SQL¹®¿¡ º¯¼ö ÀÔ·Â
-			
+			// SQLì— ë³€ìˆ˜ ì…ë ¥
 			pstmt.setString(1,searchBookName+"%");
-
-			//SQL¹® ½ÇÇà
+			//SQLë¬¸ ì‹¤í–‰
 			ResultSet rs = pstmt.executeQuery();
 
 			while(rs.next()) {
-				
-				// DTO °´Ã¼ »ı¼º
+				// DTO ê°ì²´ ìƒì„±
 				BookDTO bookDTO = new BookDTO();
-				
-				// DB Select°á°ú¸¦ DO °´Ã¼¿¡ ÀúÀå
+				// DB Selectê²°ê³¼ë¥¼ DO ê°ì²´ì— ì €ì¥
 				bookDTO.setBookNumber(rs.getInt("booknumber"));
 				bookDTO.setBookName(rs.getString("bookName"));
 				bookDTO.setAuthor(rs.getString("author"));
@@ -81,12 +107,10 @@ public class BookDAO {
 				bookDTO.setCategory(rs.getString("category"));
 				bookDTO.setSymbol(rs.getString("symbol"));
 				bookDTO.setStatus(rs.getString("status"));
-				
 							
 				bookList.add(bookDTO);
 			}
 			rs.close();
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
