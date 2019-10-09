@@ -59,14 +59,14 @@
                 <form name="form1" method="post" action="BookController">
                 	<input type="hidden" name="action" value="list">
 					<input type="hidden" name="bookNumber" value=0>
-					<input type="text" name="searchBookName" value=${bookDTO.searchBookName}>
+					<input type="text" id="serchBookName" name="searchBookName" value=${bookDTO.searchBookName}>
+                	<input type="button" id="list" value="조회" onClick="retrivalcheck()">
                 </form>  
-				<a href="#"><img src="Img/search_1.png"></a>
 			</article>
         	<article class="main_article">
             	<ul>
 					<li class="article_title">추천 도서</li>
-					<img src="/Img/book1.jpg">
+					<img src="Img/book1.jpg">
 					<li class="book_title">도로시 죽이기</li>
 					<li class="book_sub">고바야시 야스미<br>검은숲</li>				
 					
