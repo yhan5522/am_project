@@ -74,33 +74,33 @@
             </article>
 		</aside>
 		<section id="main_section">
-	        	<article id="main_article">
-					<ul id="article_title">
-						<li>통합 검색</li>
-					</ul>
-					<hr>
-					<form name="form1" method="post" action="BookController">
-						<input type="hidden" name="action" value="list">
-						<input type="hidden" name="bookNumber" value=0>
-						<input type="text" id="searchBookName" align="left " name="searchBookName" value=${bookDTO.searchBookName}>
-	    				<input type="button" id="list" align=right value="조회" onClick="retrivalcheck()">
-						<table>
+	        <article id="main_article">
+				<ul id="article_title">
+					<li>통합 검색</li>
+				</ul>
+				<hr>
+				<form name="form1" method="post" action="BookController">
+					<input type="hidden" name="action" value="list">
+					<input type="hidden" name="bookNumber" value=0>
+					<input type="text" id="searchBookName" align="left " name="searchBookName" value=${bookDTO.searchBookName}>
+	    			<input type="button" id="list" align=right value="조회" onClick="retrivalcheck()">
+					<table>
+						<tr>
+							<th>번호</th>
+							<th>도서명</th>
+							<th>저자</th>
+							<th>출판사</th>
+							<th>분류</th>
+							<th>청구기호</th>
+							<th>상태</th>
+						</tr>
+						<c:forEach var="i" items="${bookList}">
 							<tr>
-								<th>번호</th>
-								<th>도서명</th>
-								<th>저자</th>
-								<th>출판사</th>
-								<th>분류</th>
-								<th>청구기호</th>
-								<th>상태</th>
-							</tr>
-							<c:forEach var="i" items="${bookList}">
-								<tr>
-									<td><a href="javascript:editcheck(${i.bookNumber})">${i.bookNumber}</a></td>
-									<td>${i.bookName}</td>
-									<td>${i.author}</td>
-									<td>${i.publishingHouse}</td>
-									<td>${i.category}</td>
+								<td><a href="javascript:editcheck(${i.bookNumber})">${i.bookNumber}</a></td>
+								<td>${i.bookName}</td>
+								<td>${i.author}</td>
+								<td>${i.publishingHouse}</td>
+								<td>${i.category}</td>
 								<td>${i.symbol}</td>
 								<td>${i.status}</td>
 							</tr>

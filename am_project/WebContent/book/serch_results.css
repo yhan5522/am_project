@@ -219,11 +219,18 @@ img {
 	width: 100%;
 	font-size: 14px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	border: 2px solid #5f5f5f;
     border-collapse: collapse;
 }
+#main_article table tr th {
+	border: 1px solid #5f5f5f5f;
+}
+#main_article table td {
+	border: 1px solid #5f5f5f5f;
+}
 #main_article table th:first-child {
-	width: 30px;
+	width: 35px;
 }
 #main_article table th:nth-child(3) {
 	width: 50px;
