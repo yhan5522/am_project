@@ -8,8 +8,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>미추홀도서관</title>
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-	<script type="text/javascript" src="main.js"></script>
+	<link rel="stylesheet" href="main.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 	<header id="main_header">

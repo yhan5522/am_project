@@ -11,59 +11,59 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.PageContext;
 
-@WebServlet(description = "book Controller ¼­ºí¸´", urlPatterns = { "/book/BookController" })
+@WebServlet(description = "book Controller ï¿½ï¿½ï¿½ï¿½", urlPatterns = { "/book/BookController" })
 public class BookController extends HttpServlet {
 
-	// °´Ã¼ Á÷·ÄÈ­(Serializable), ÀÌÅ¬¸³½º¿¡¼­ ÀÚµ¿ »ý¼ºÀº Å¬·¡½º ÀÌ¸§¿¡¼­ Ctrl + 1
+	// ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½È­(Serializable), ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ Ctrl + 1
 	private static final long serialVersionUID = 1L;
 
-	// _jspxFactory »ý¼º
+	// _jspxFactory ï¿½ï¿½ï¿½ï¿½
 	private static final javax.servlet.jsp.JspFactory _jspxFactory = javax.servlet.jsp.JspFactory.getDefaultFactory();
 	
 	
 	/******************************************************************************************/
-	// GET ¿äÃ»À» Ã³¸®ÇÏ±â À§ÇÑ ¸Þ¼­µå
+	// GET ï¿½ï¿½Ã»ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 	/******************************************************************************************/
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		// doPost()·Î Æ÷¿öµù.
+		// doPost()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 		doPost(request, response);
 	}
 
 	
 	/******************************************************************************************/
-	// POST ¿äÃ»À» Ã³¸®ÇÏ±â À§ÇÑ ¸Þ¼­µå
+	// POST ï¿½ï¿½Ã»ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 	/******************************************************************************************/
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-	    // pageContext ÂüÁ¶º¯¼ö ¼±¾ð
+	    // pageContext ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		// javax.servlet.jsp.PageContext pageContext = null;
 		PageContext pageContext = null;
 		
 		try {
 
-		   // pageContext ÂüÁ¶º¯¼ö °´Ã¼ »ý¼º
+		   // pageContext ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 			pageContext = _jspxFactory.getPageContext(this, request, response, null, true, 8192, true);
 		
 			
-			// ÇÑ±Û ÀÎÄÚµù
+			// ï¿½Ñ±ï¿½ ï¿½ï¿½ï¿½Úµï¿½
 			request.setCharacterEncoding("UTF-8");
 			
-			// Å¬¶óÀÌ¾ðÆ® ÀÀ´ä½Ã Àü´ÞµÉ ÄÁÅÙÆ®¿¡ ´ëÇÑ Å¸ÀÙ ¼³Á¤°ú Ä³¸´ÅÍ¼Â ÁöÁ¤
+			// Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Þµï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½Í¼ï¿½ ï¿½ï¿½ï¿½ï¿½
 			response.setContentType("text/html; charset=UTF-8");
 	
-			// action±¸ºÐ µî ÆÄ¶ó¸ÞÅÍ
+			// actionï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½
 			String action = request.getParameter("action");
 			System.out.println("Controller action = " + action);
 
 
-			//Å¬¶óÀÌ¾ðÆ® ÀÀ´äÀ» À§ÇÑ Ãâ·Â ½ºÆ®¸² È®º¸(alert ¸Þ¼¼Áö¿ë)
+			//Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ È®ï¿½ï¿½(alert ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½)
 			PrintWriter out = response.getWriter();
 			
-			// accountTransferDTO º¯¼ö Á¤ÀÇ
+			// accountTransferDTO ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			BookDTO bookDTO = new BookDTO();
 			
-			/* Á¶È¸Á¶°Ç °ª ¼³Á¤            */			
+			/* ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½            */			
 			String searchBookName = request.getParameter("searchBookName");
 				
 			if(searchBookName == null) {
@@ -72,23 +72,23 @@ public class BookController extends HttpServlet {
 			
 			bookDTO.setSearchBookName(searchBookName);
 
-			// accountTransferDAO º¯¼ö Á¤ÀÇ
+			// accountTransferDAO ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			BookDAO bookDAO = new BookDAO();
 
-			// action¿¡ µû¶ó ¸ðµ¨ È£Ãâ		
+			// actionï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½		
 			if(action.equals("list")) {
 
-				// °èÁÂÀÌÃ¼ Á¶È¸°á°ú
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼ ï¿½ï¿½È¸ï¿½ï¿½ï¿½
 				List<BookDTO> bookList = bookDAO.getDBList(bookDTO.getSearchBookName());
 
-				// List¸¦ setAttribute
+				// Listï¿½ï¿½ setAttribute
 				request.setAttribute("bookList", bookList);
 
-				pageContext.forward("book_list.jsp");
+				pageContext.forward("serch_results.jsp");
 
 			} else {
 				
-				out.println("<script>alert('action ÆÄ¶ó¹ÌÅÍ¸¦ È®ÀÎÇØ ÁÖ¼¼¿ä!!!')</script>");
+				out.println("<script>alert('action ï¿½Ä¶ï¿½ï¿½ï¿½Í¸ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ï¿½ï¿½!!!')</script>");
 				
 			}
 			
