@@ -21,10 +21,7 @@
 		</div>
 		<nav id="main_gnb">
 			<ul>
-				<li><a href="#">청라호수도서관</a></li>
-				<li><a href="#">청라국제도서관</a></li>
-				<li><a href="#">영종하늘도서관</a></li>
-				<li><a href="#">송도국제기구도서관</a></li>
+				<li><a href="book_list.jsp">관리자페이지</a></li>
 			</ul>
 		</nav>
 		<nav id="main_lnb">
