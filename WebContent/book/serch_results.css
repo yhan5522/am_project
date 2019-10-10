@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "맑은 고딕";
+}
+li {
+	list-style: none;	
+}
+a {
+	text-decoration: none;	
+}
+img {
+	border: 0;	
+}	
+/*헤더*/
+#main_header {
+	width: 1040px;
+	height: 174px;
+	margin: 0 auto;
+	position: relative;	
+}
+#main_header > #title {
+	position: absolute;
+	top: 23px; 
+}
+#main_header > #main_gnb {
+	position: absolute;
+	right: 0px;
+	top: 17px;	
+}
+#main_header > #main_lnb {
+	position: absolute;
+	width: 1040px;
+	height: 60px;
+	bottom: 30px;	
+}
+#main_header > #route {
+	position: absolute;
+	right: 0;
+	bottom: 0;	
+}
+/*타이틀*/
+#title {
+	width: 500px;
+}
+#title > a > span {
+	display: inline;
+	font-weight: Bold;	
+	font-size: 14pt;
+}
+#title > a >span:first-child {
+	color: #000000;
+}
+#title > a >span:nth-child(2) {
+	color: #8b4194;
+}
+#title > span {
+	display: block;	
+	font-weight: normal;
+	font-size: 8pt;
+}
+/*메뉴1*/
+#main_gnb > ul {
+	overflow: hidden;	
+}
+#main_gnb > ul > li {
+	float: left;
+}
+#main_gnb > ul > li > a {
+	text-align: center;
+	color: #7d7d7d;
+	font-size: 9pt;
+	display: block;
+	padding-top: 0;
+	padding-left: 17px;
+}
+#main_gnb > ul > li > a:hover {
+	font-weight: Bold;	
+}	
+/*메뉴2*/
+#main_lnb > ul {
+	overflow: hidden;	
+	background-color: #ffa4af;
+}
+#main_lnb > ul > li {
+	float: left;
+}
+#main_lnb > ul > li > a {
+	font-size: 13pt;
+	display: block;
+	color: #ffffff;
+	width: 150px;
+	padding: 17px 0;
+	text-align: center;
+}
+#main_lnb > ul > li > a:hover {
+	color: #8b4194;
+	font-weight: Bold;	
+}
+/*경로*/
+#route > ul {
+	overflow: hidden;		
+}
+#route > ul li {
+	float: left;
+	text-align: center;
+	color: #757575;
+	font-size: 12pt;
+	display: block;
+	padding-top: 0;
+	padding-left: 12px;
+}	
+/*세부메뉴*/
+.article {
+	index: 100;
+	display: none;
+	position: absolute;
+	background-color: #FFBFC6;
+	text-align: center;
+}
+.article a {
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	width: 150px;
+	padding: 17px 0;
+}
+.article a:hover {
+	color: #8b4194;
+	font-weight: Bold;
+}
+.menu:hover .article {
+	display: block;	
+}
+/*콘텐츠*/
+#content {
+	width: 1040px;
+	margin: 0 auto;
+	overflow: hidden;	
+}
+#content > #main_aside {
+	width: 200px;
+	float: left;
+}
+#content > #main_section {
+	width: 820px;
+	float: right;
+}
+/*서브 메뉴*/
+#main_aside {
+	height: 215px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 30px;
+	background-color: #f5f5f5;
+	border: 0;
+	box-sizing: border-box;
+}	
+#sub_menu a {
+	color: #000000;
+}
+#sub_menu hr {
+	border: 0;
+	height: 1px;
+	background-color: #5f5f5f;	
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+#sub_menu > ul:first-child {
+	margin-bottom: 50px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+#sub_menu a:hover {
+	font-weight: bold;
+}
+/*내용*/
+#main_article {
+	padding: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 30px;
+	margin-top: 50px;
+	border: 0;
+	box-sizing: border-box;
+	background-color: #f5f5f5;
+}
+#article_title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 30px;
+	margin-left: 20px;
+}
+#main_article hr {
+	border: 0;
+	height: 1px;
+	background-color: #5f5f5f;
+	margin-bottom: 20px;
+}
+#searchBookName {
+	width: 500px;
+	height: 21px;
+}
+#list {
+	background-color: #ffa4af;
+	border: 0;
+	color: #fff;
+	width: 50px;
+	height: 25px;
+}
+#main_article table {
+	width: 100%;
+	font-size: 14px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 2px solid #5f5f5f;
+    border-collapse: collapse;
+}
+#main_article table tr th {
+	border: 1px solid #5f5f5f5f;
+}
+#main_article table td {
+	border: 1px solid #5f5f5f5f;
+}
+#main_article table th:first-child {
+	width: 35px;
+}
+#main_article table th:nth-child(3) {
+	width: 50px;
+}
+#main_article table th:nth-child(4) {
+	width: 60px;
+}
+#main_article table th:nth-child(5) {
+	width: 70px;
+}
+#main_article table th:nth-child(6) {
+	width: 110px;
+}
+#main_article table th:nth-child(7) {
+	width: 40px;
+}
+#main_article table tr:nth-child(1) {
+	height: 30px;
+}
+#main_article table tr:nth-child(2) {
+	text-align: center;
+}
+/*푸터*/
+#main_footer {
+	width: 1040px;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 10px;
+	text-align: center;
+	line-height: 25px;	
+}
+#main_footer hr {
+	margin-bottom: 10px;
+	border: 0;
+	height: 1px;
+	background-color: #5f5f5f;	
+}
+#main_footer > a h4 {
+	color: black;
+	display: inline;	
+	font-size: 14px;
+}
+#main_footer > address {
+	font-size: 14px;	
+}
