@@ -21,10 +21,7 @@
         </div>
        	<nav id="main_gnb">
         	<ul>
-            	<li><a href="#">청라호수도서관</a></li>
-              	<li><a href="#">청라국제도서관</a></li>
-             	<li><a href="#">영종하늘도서관</a></li>
-             	<li><a href="#">송도국제기구도서관</a></li>
+             	<li><a href="book_list.jsp">관리자페이지</a></li>
             </ul>
         </nav>
         <nav id="main_lnb">
@@ -56,7 +53,7 @@
     	<section id="main_section">
        		<article id="serch">
 				<img src="Img/library1.jpg">
-                <form name="form1" method="post" action="BookController">
+                <form name="form1" method="post" action="BooksController">
                 	<input type="hidden" name="action" value="list">
 					<input type="hidden" name="bookNumber" value=0>
 					<input type="text" id="serchBookName" name="searchBookName" value=${bookDTO.searchBookName}>

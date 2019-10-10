@@ -79,7 +79,7 @@
 					<li>통합 검색</li>
 				</ul>
 				<hr>
-				<form name="form1" method="post" action="BookController">
+				<form name="form1" method="post" action="BooksController">
 					<input type="hidden" name="action" value="list">
 					<input type="hidden" name="bookNumber" value=0>
 					<input type="text" id="searchBookName" align="left " name="searchBookName" value=${bookDTO.searchBookName}>

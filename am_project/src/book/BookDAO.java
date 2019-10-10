@@ -119,4 +119,47 @@ public class BookDAO {
 		}
 		return bookList;
 	}
+	
+	/**
+	 * 	@fn			public boolean insertDB(BookDTO bookDTO)
+	 *	@brief		값 입력
+	 *	@details
+	 *
+	 *	@author		한예나
+	 *	@date		2019-10-10
+	 *
+	 *	@param		BookDTO bookDTO DTO 값 저장
+	 *  
+	 *	@remark		데이터베이스에서 insert하기 위해 sql 선언		[2019-10-10; 한예나]
+	 */
+	// 입력
+	public boolean insertDB(BookDTO bookDTO) {
+		
+		connect();
+		try {
+			conn.setAutoCommit(false);		
+			String sql1 ="insert into book(bookName, author, publishingHouse, category, symbol, status) values(?,?,?,?,?,?)";
+			pstmt = conn.prepareStatement(sql1);
+			pstmt.setString(1,bookDTO.getBookName());
+			pstmt.setString(2,bookDTO.getAuthor());
+			pstmt.setString(3,bookDTO.getPublishingHouse());
+			pstmt.setString(4,bookDTO.getCategory());
+			pstmt.setString(5,bookDTO.getSymbol());
+			pstmt.setString(6,bookDTO.getStatus());
+			if(pstmt.executeUpdate() < 1) {
+			
+				conn.rollback();
+				System.out.println("insert 시 DB insert 오류로 Rollback");
+			}
+			conn.setAutoCommit(true);
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+		finally {
+			disconnect();
+		}
+		return true;
+	}
 }

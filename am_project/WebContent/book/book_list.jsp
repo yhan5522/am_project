@@ -13,6 +13,7 @@
 </head>
 <body>
 <div align=center>
+	<a href="main.jsp">메인페이지</a>
 	<H2>도서 목록 조회</H2>
 
 	<!-- 계좌이체 목록 조회폼 -->
@@ -22,10 +23,10 @@
 	
 		<table border=1>
 			<tr>
-				<td colspan=7 align=right>
-        			<input type="button" align="left " value="도서명" >
+				<td colspan=7 align=right id="table_title">
+        			<span>도서명</span>
     				<input type="text" align="left " name="searchBookName" value=${bookDTO.searchBookName}>
-    				<input type="button" id="list" align=right value="조회" onClick="retrivalcheck()">
+    				<input type="button" id="list" align=right value="검색" onClick="retrivalcheck()">
     				<input type="button" align=right value="추가" onClick="addcheck()">
 				</td>
 			</tr>
