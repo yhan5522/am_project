@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>검색결과조회</title>
 	<link rel="stylesheet" href="serch_results.css" type="text/css" media="screen" />
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="book_list.js"></script>
 </head>
 <body>
 	<header id="main_header">

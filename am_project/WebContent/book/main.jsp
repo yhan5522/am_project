@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>미추홀도서관</title>
 	<link rel="stylesheet" href="main.css" type="text/css" media="screen" />
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="book_list.js"></script>
 </head>
 <body>
 	<header id="main_header">
