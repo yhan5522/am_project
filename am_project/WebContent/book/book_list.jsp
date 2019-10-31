@@ -16,7 +16,6 @@
 	<a href="main.jsp">메인페이지</a>
 	<H2>도서 목록 조회</H2>
 
-	<!-- 계좌이체 목록 조회폼 -->
 	<form name="form1" method="post" action="BookController">
 		<input type="hidden" name="action" value="list">
 		<input type="hidden" name="bookNumber" value=0>

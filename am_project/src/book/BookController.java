@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.PageContext;
 
-@WebServlet(description = "book Controller ����", urlPatterns = { "/book/BookController" })
+@WebServlet(description = "book Controller 占쏙옙占쏙옙", urlPatterns = { "/book/BookController" })
 public class BookController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -21,7 +21,7 @@ public class BookController extends HttpServlet {
 	// GET
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		// doPost()�� ������.
+		// doPost()占쏙옙 占쏙옙占쏙옙占쏙옙.
 		doPost(request, response);
 	}
 
@@ -80,7 +80,7 @@ public class BookController extends HttpServlet {
 					pageContext.forward("book_list.jsp");
 					
 				} else {
-					throw new Exception("DB 입력 오류");
+					throw new Exception("DB �엯�젰 �삤瑜�");
 				}
 				
 			} else if(action.equals("list")) {
@@ -91,8 +91,42 @@ public class BookController extends HttpServlet {
 
 				pageContext.forward("book_list.jsp");
 
+			} else if(action.equals("update")) {
+
+				// 수정
+				if(bookDAO.updateDB(bookDTO)) {
+
+					// 조회결과
+					List<BookDTO> bookList = bookDAO.getDBList(bookDTO.getSearchBookName());
+					
+					// List를 setAttribute
+					request.setAttribute("bookList", bookList);
+
+					// 결과 조회를 위하여 조회화면 호출
+					pageContext.forward("book_list.jsp");
+				} else {
+					throw new Exception("DB 수정오류");
+				}
+				
+			} else if(action.equals("delete")) {
+
+				// 삭제
+				if(bookDAO.deleteDB(bookDTO)) {
+
+					// 조회결과
+					List<BookDTO> bookList = bookDAO.getDBList(bookDAO.getSearchBookName());
+					
+					// List를 setAttribute
+					request.setAttribute("bookList", bookList);
+
+					// 결과 조회를 위하여 조회화면 호출
+					pageContext.forward("book_list.jsp");
+				} else {
+					throw new Exception("DB 삭제오류");
+				}
+				
 			} else {
-				out.println("<script>alert('action 파라미터 확인')</script>");
+				out.println("<script>alert('action �뙆�씪誘명꽣 �솗�씤')</script>");
 			}
 			
 		} catch (Exception e) {
