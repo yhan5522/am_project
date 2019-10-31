@@ -164,16 +164,19 @@ public class BookDAO {
 	}
 	
 	/**
-	 * 	@fn			public boolean insertDB(BookDTO bookDTO)
-	 *	@brief		媛� �엯�젰
+	 * 	@fn			public BookDTO getDB(int id)
+	 *	@brief		edit용 도서목록 1건 조회 메서드
 	 *	@details
 	 *
-	 *	@author		�븳�삁�굹
-	 *	@date		2019-10-10
+	 *	@author		신예성
+	 *	@date		2019-10-30
 	 *
-	 *	@param		BookDTO bookDTO DTO 媛� ���옣
+	 *	@param		int id  id를 식별하여 도서목록 1건 조회
 	 *  
-	 *	@remark		�뜲�씠�꽣踰좎씠�뒪�뿉�꽌 insert�븯湲� �쐞�빐 sql �꽑�뼵		[2019-10-10; ]
+	 *	@remark		
+	 *				
+	 *				
+	 *							[2019-10-30; 신예성]
 	 */
 	
 public BookDTO getDB(int id) {
@@ -218,16 +221,19 @@ public BookDTO getDB(int id) {
 	}
 
 /**
- * 	@fn			public boolean insertDB(BookDTO bookDTO)
- *	@brief		媛� �엯�젰
+ * 	@fn			public boolean updateDB(BookDTO bookDTO)
+ *	@brief		도서목록 수정 메서드
  *	@details
  *
- *	@author		�븳�삁�굹
- *	@date		2019-10-10
+ *	@author		신예성
+ *	@date		2019-10-30
  *
- *	@param		BookDTO bookDTO DTO 媛� ���옣
+ *	@param		BookDTO bookDTO DTO 값 수정
  *  
- *	@remark		�뜲�씠�꽣踰좎씠�뒪�뿉�꽌 insert�븯湲� �쐞�빐 sql �꽑�뼵		[2019-10-10; ]
+ *	@remark		데이터베이스에서 insert하기 위해 sql 선언
+ *				
+ *				
+ *							[2019-10-30; 신예성]
  */
 
 	
@@ -321,16 +327,19 @@ public boolean updateDB(BookDTO bookDTO) {
 }
 
 /**
- * 	@fn			public boolean insertDB(BookDTO bookDTO)
- *	@brief		媛� �엯�젰
+ * 	@fn			public boolean deleteDB(BookDTO bookDTO)
+ *	@brief		도서목록 삭제 메서드
  *	@details
  *
- *	@author		�븳�삁�굹
- *	@date		2019-10-10
+ *	@author		신예성
+ *	@date		2019-10-30
  *
- *	@param		BookDTO bookDTO DTO 媛� ���옣
+ *	@param		BookDTO bookDTO DTO 값 삭제
  *  
- *	@remark		�뜲�씠�꽣踰좎씠�뒪�뿉�꽌 insert�븯湲� �쐞�빐 sql �꽑�뼵		[2019-10-10; ]
+ *	@remark		데이터베이스에서 insert하기 위해 sql 선언
+ *				
+ *				
+ *							[2019-10-30; 신예성]
  */
 
 public boolean deleteDB(BookDTO bookDTO) {
